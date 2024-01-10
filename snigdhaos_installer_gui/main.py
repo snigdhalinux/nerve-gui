@@ -27,7 +27,7 @@ gi.require_version("Vte", "3.91")
 
 
 from gi.repository import Gtk, Gio, Adw
-from jade_gui.window import JadeGuiWindow
+from snigdhaos_installer_gui.window import JadeGuiWindow
 
 
 class Jade_guiApplication(Adw.Application):

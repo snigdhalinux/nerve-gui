@@ -2,7 +2,7 @@
 <interface>
 <requires lib="gtk" version="4.0"/>
   <object class="AdwAboutWindow" id="aboutWindow">
-    <property name="application-name">Jade GUI</property>
+    <property name="application-name">Snigdha OS Installer GUI</property>
     <property name="application-icon">al.getcryst.jadegui</property>
     <property name="modal">True</property>
     <property name="version">1.9.0</property>
