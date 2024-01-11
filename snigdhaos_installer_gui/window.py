@@ -20,27 +20,27 @@
 import time
 import socket
 from gi.repository import Gtk, Gdk, GLib, Adw
-from jade_gui.classes.partition import Partition
-from jade_gui.widgets.desktop import DesktopEntry
-from jade_gui.widgets.disk import DiskEntry
-from jade_gui.widgets.partition import PartitionEntry
-from jade_gui.functions.keyboard_screen import KeyboardScreen
-from jade_gui.functions.timezone_screen import TimezoneScreen
-from jade_gui.functions.locale_screen import LocaleScreen
-from jade_gui.functions.user_screen import UserScreen
-from jade_gui.functions.desktop_screen import DesktopScreen
-from jade_gui.functions.misc_screen import MiscScreen
-from jade_gui.functions.partition_screen import PartitionScreen
-from jade_gui.functions.summary_screen import SummaryScreen
-from jade_gui.functions.install_screen import InstallScreen
-from jade_gui.functions.finished_screen import FinishedScreen
-from jade_gui.functions.welcome_screen import WelcomeScreen
-from jade_gui.classes.jade_screen import JadeScreen
-from jade_gui.locales.locales_list import locations
-from jade_gui.keymaps import keymaps
-from jade_gui.desktops import desktops
-from jade_gui.utils import disks
-from jade_gui.utils.threading import RunAsync
+from snigdhaos_installer_gui.classes.partition import Partition
+from snigdhaos_installer_gui.widgets.desktop import DesktopEntry
+from snigdhaos_installer_gui.widgets.disk import DiskEntry
+from snigdhaos_installer_gui.widgets.partition import PartitionEntry
+from snigdhaos_installer_gui.functions.keyboard_screen import KeyboardScreen
+from snigdhaos_installer_gui.functions.timezone_screen import TimezoneScreen
+from snigdhaos_installer_gui.functions.locale_screen import LocaleScreen
+from snigdhaos_installer_gui.functions.user_screen import UserScreen
+from snigdhaos_installer_gui.functions.desktop_screen import DesktopScreen
+from snigdhaos_installer_gui.functions.misc_screen import MiscScreen
+from snigdhaos_installer_gui.functions.partition_screen import PartitionScreen
+from snigdhaos_installer_gui.functions.summary_screen import SummaryScreen
+from snigdhaos_installer_gui.functions.install_screen import InstallScreen
+from snigdhaos_installer_gui.functions.finished_screen import FinishedScreen
+from snigdhaos_installer_gui.functions.welcome_screen import WelcomeScreen
+from snigdhaos_installer_gui.classes.jade_screen import JadeScreen
+from snigdhaos_installer_gui.locales.locales_list import locations
+from snigdhaos_installer_gui.keymaps import keymaps
+from snigdhaos_installer_gui.desktops import desktops
+from snigdhaos_installer_gui.utils import disks
+from snigdhaos_installer_gui.utils.threading import RunAsync
 
 
 @Gtk.Template(resource_path="/al/getcryst/jadegui/window.ui")
