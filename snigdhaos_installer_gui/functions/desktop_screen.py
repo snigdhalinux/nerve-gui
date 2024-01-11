@@ -22,7 +22,7 @@ from gi.repository import Gtk, Adw
 from snigdhaos_installer_gui.classes.snigdhaos_installer_screen import SnigdhaOSInstallerScreen
 
 
-@Gtk.Template(resource_path="/al/getcryst/jadegui/pages/desktop_screen.ui")
+@Gtk.Template(resource_path="/org/snigdhaos/snigdhaos_installer_gui/pages/desktop_screen.ui")
 class DesktopScreen(SnigdhaOSInstallerScreen, Adw.Bin):
     __gtype_name__ = "DesktopScreen"
 
