@@ -19,11 +19,11 @@
 
 
 from gi.repository import Gtk, Adw
-from jade_gui.classes.jade_screen import JadeScreen
+from snigdhaos_installer_gui.classes.snigdhaos_installer_screen import SnigdhaOSInstallerScreen
 
 
 @Gtk.Template(resource_path="/al/getcryst/jadegui/pages/desktop_screen.ui")
-class DesktopScreen(JadeScreen, Adw.Bin):
+class DesktopScreen(SnigdhaOSInstallerScreen, Adw.Bin):
     __gtype_name__ = "DesktopScreen"
 
     list_desktops = Gtk.Template.Child()

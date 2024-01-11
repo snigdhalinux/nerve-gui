@@ -7,6 +7,6 @@ jade_gui_sources = [
     'keymap.py',
     'install_prefs.py',
     'partition.py',
-    'jade_screen.py'
+    'snigdhaos_installer_screen.py'
 ]
 install_data(jade_gui_sources, install_dir: classesdir)
