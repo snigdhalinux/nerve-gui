@@ -1,4 +1,4 @@
-from jade_gui.classes.locale import locale
+from snigdhaos_installer_gui.classes.locale import locale
 
 asia = [
     locale(
