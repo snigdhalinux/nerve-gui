@@ -35,7 +35,7 @@ from snigdhaos_installer_gui.functions.summary_screen import SummaryScreen
 from snigdhaos_installer_gui.functions.install_screen import InstallScreen
 from snigdhaos_installer_gui.functions.finished_screen import FinishedScreen
 from snigdhaos_installer_gui.functions.welcome_screen import WelcomeScreen
-from snigdhaos_installer_gui.classes.jade_screen import JadeScreen
+from snigdhaos_installer_gui.classes.snigdhaos_installer_screen import JadeScreen
 from snigdhaos_installer_gui.locales.locales_list import locations
 from snigdhaos_installer_gui.keymaps import keymaps
 from snigdhaos_installer_gui.desktops import desktops
