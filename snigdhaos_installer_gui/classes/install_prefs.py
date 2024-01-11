@@ -29,13 +29,19 @@ class InstallPrefs:
         layout,
         variant,
         username,
+        shell,
         password,
         enable_sudo,
         disk,
         hostname,
-        timeshift_enabled,
+        snapper_enabled,
+        # timeshift_enabled,
         zramd_enabled,
+        kernel,
         desktop,
+        displaymanager,
+        browser,
+        terminal,
         partition_mode,
         partitions,
     ):
@@ -50,10 +56,15 @@ class InstallPrefs:
             self.disk = disk.disk
         else:
             self.disk = ""
-        self.hostname = hostname if len(hostname) != 0 else "crystal"
-        self.timeshift_enabled = timeshift_enabled
+        self.hostname = hostname if len(hostname) != 0 else "SnigdhaOS"
+        # self.timeshift_enabled = timeshift_enabled
+        self.snapper_enabled = snapper_enabled
         self.zramd_enabled = zramd_enabled
+        self.kernel = kernel
         self.desktop = desktop
+        self.displaymanager = displaymanager
+        self.browser = browser
+        self.terminal = terminal
         self.partition_mode = partition_mode
         self.partitions = partitions
         self.is_efi = disks.get_uefi()
@@ -88,17 +99,21 @@ class InstallPrefs:
             ],
             "rootpass": self.password,
             "desktop": self.desktop.lower(),
-            "timeshift": self.timeshift_enabled,
-            "extra_packages": ["firefox"],
-            "flatpak": True,
+            # "timeshift": self.timeshift_enabled,
+            "displaymanager": self.displaymanager.lower(),
+            # "extra_packages": ["firefox"],
+            "browser": self.browser.lower(),
+            "terminal": self.terminal.lower(),
+            "snapper": self.snapper_enabled,
+            "flatpak": False,
             "zramd": self.zramd_enabled,
-            "unakite": {
-                "enable": False,
-                "root": "/dev/null",
-                "oldroot": self.disk,
-                "efidir": "/dev/null",
-                "bootdev": "/dev/null",
-            },
-            "kernel": "linux",
+            # "unakite": {
+            #     "enable": False,
+            #     "root": "/dev/null",
+            #     "oldroot": self.disk,
+            #     "efidir": "/dev/null",
+            #     "bootdev": "/dev/null",
+            # },
+            "kernel": self.kernel.lower(),
         }
         return json.dumps(prefs)
