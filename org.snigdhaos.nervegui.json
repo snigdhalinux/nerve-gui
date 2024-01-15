@@ -1,9 +1,9 @@
 {
-  "app-id": "al.getcryst.jadegui",
+  "app-id": "org.snigdhaos.nervegui",
   "runtime": "org.gnome.Platform",
   "runtime-version": "43",
   "sdk": "org.gnome.Sdk",
-  "command": "jade-gui",
+  "command": "nerve-gui",
   "finish-args": [
     "--share=network",
     "--share=ipc",
