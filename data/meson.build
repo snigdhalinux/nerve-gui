@@ -1,6 +1,6 @@
 desktop_file = i18n.merge_file(
-  input: 'al.getcryst.jadegui.desktop.in',
-  output: 'al.getcryst.jadegui.desktop',
+  input: 'org.snigdhaos.nervegui.desktop.in',
+  output: 'org.snigdhaos.nervegui.desktop',
   type: 'desktop',
   po_dir: '../po',
   install: true,
@@ -15,8 +15,8 @@ if desktop_utils.found()
 endif
 
 appstream_file = i18n.merge_file(
-  input: 'al.getcryst.jadegui.appdata.xml.in',
-  output: 'al.getcryst.jadegui.appdata.xml',
+  input: 'org.snigdhaos.nervegui.appdata.xml.in',
+  output: 'org.snigdhaos.nervegui.appdata.xml',
   po_dir: '../po',
   install: true,
   install_dir: join_paths(get_option('datadir'), 'appdata')
@@ -29,7 +29,7 @@ if appstream_util.found()
   )
 endif
 
-install_data('al.getcryst.jadegui.gschema.xml',
+install_data('org.snigdhaos.nervegui.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
 

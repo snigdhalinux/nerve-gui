@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=Install Crystal Linux
+Name=Install Snigdha OS
 
-Exec=jade-gui
+Exec=nerve-gui
 
-Icon=al.getcryst.jadegui
+Icon=org.snigdhaos.nervegui
 
 Terminal=false
 Type=Application
