@@ -1,4 +1,4 @@
-class SnigdhaOSInstallerScreen:
+class NerveScreen:
     def __init__(self, set_valid):
         super().__init__()
         self._set_valid = set_valid
