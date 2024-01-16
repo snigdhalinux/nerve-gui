@@ -21,13 +21,13 @@ import subprocess, os, shutil
 import asyncio
 from gi.repository import Gtk, GLib, Adw, Vte, Pango
 from gettext import gettext as _
-from jade_gui.utils.command import CommandUtils
-from jade_gui.classes.jade_screen import JadeScreen
+from nerve_gui.utils.command import CommandUtils
+from nerve_gui.classes.nerve_screen import NerveScreen
 import time
 
 
-@Gtk.Template(resource_path="/al/getcryst/jadegui/pages/install_screen.ui")
-class InstallScreen(JadeScreen, Adw.Bin):
+@Gtk.Template(resource_path="/org/snigdhaos/nervegui/pages/install_screen.ui")
+class InstallScreen(NerveScreen, Adw.Bin):
     __gtype_name__ = "InstallScreen"
 
     log_box = Gtk.Template.Child()
@@ -48,7 +48,7 @@ class InstallScreen(JadeScreen, Adw.Bin):
 
     def on_show(self):
         prefs = self.window.summary_screen.installprefs.generate_json()
-        with open(os.getenv("HOME") + "/.config/jade.json", "w") as f:
+        with open(os.getenv("HOME") + "/.config/nerve.json", "w") as f:
             f.write(prefs)
 
         prefs = self.window.summary_screen.installprefs.generate_json()
@@ -56,7 +56,7 @@ class InstallScreen(JadeScreen, Adw.Bin):
         self.vte_instance.spawn_async(
             Vte.PtyFlags.DEFAULT,
             ".",  # working directory
-            ["bash", "/usr/share/jade-gui/jade_gui/scripts/install.sh"],
+            ["bash", "/usr/share/nerve-gui/nerve_gui/scripts/install.sh"],
             [],  # environment
             GLib.SpawnFlags.DO_NOT_REAP_CHILD,
             None,
