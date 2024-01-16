@@ -1,10 +1,10 @@
 # ide_screen.py
 
 from gi.repository import Gtk, Adw
-from snigdhaos_installer_gui.classes.snigdhaos_installer_screen import SnigdhaOSInstallerScreen
+from nerve_gui.classes.nerve_screen import NerveScreen
 
-@Gtk.Template(resource_path="/org/snigdhaos/snigdhaos_installer_gui/pages/ide_screen.ui")
-class IdeScreen(SnigdhaOSInstallerScreen, Adw.Bin):
+@Gtk.Template(resource_path="/org/snigdhaos/nerve_gui/pages/ide_screen.ui")
+class IdeScreen(NerveScreen, Adw.Bin):
     __gtype_name__ = "IdeScreen"
 
     list_ide = Gtk.Template.Child()

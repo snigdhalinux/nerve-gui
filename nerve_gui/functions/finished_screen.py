@@ -21,8 +21,8 @@
 import subprocess, shutil
 from gi.repository import Gtk, Adw, GtkSource, Gdk
 from gettext import gettext as _
-from jade_gui.utils.command import CommandUtils
-from jade_gui.classes.jade_screen import JadeScreen
+from nerve_gui.utils.command import CommandUtils
+from nerve_gui.classes.nerve_screen import NerveScreen
 
 
 class LogWindow(Adw.Window):
@@ -64,7 +64,7 @@ class LogWindow(Adw.Window):
 
 
 @Gtk.Template(resource_path="/al/getcryst/jadegui/pages/finished_screen.ui")
-class FinishedScreen(JadeScreen, Adw.Bin):
+class FinishedScreen(NerveScreen, Adw.Bin):
     __gtype_name__ = "FinishedScreen"
 
     reboot_button = Gtk.Template.Child()
@@ -82,6 +82,6 @@ class FinishedScreen(JadeScreen, Adw.Bin):
         CommandUtils.run_command(["gnome-session-quit", "--reboot"])
 
     def output(self, widget):
-        with open("/tmp/jade-gui-output.txt", "r") as f:
+        with open("/tmp/nerve-gui-output.txt", "r") as f:
             output = f.read()
         LogWindow(window=self.window, title="Jade log view", content=output).present()
