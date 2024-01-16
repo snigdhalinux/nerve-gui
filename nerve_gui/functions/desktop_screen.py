@@ -19,11 +19,11 @@
 
 
 from gi.repository import Gtk, Adw
-from snigdhaos_installer_gui.classes.snigdhaos_installer_screen import SnigdhaOSInstallerScreen
+from nerve_gui.classes.nerve_screen import NerveScreen
 
 
 @Gtk.Template(resource_path="/org/snigdhaos/snigdhaos_installer_gui/pages/desktop_screen.ui")
-class DesktopScreen(SnigdhaOSInstallerScreen, Adw.Bin):
+class DesktopScreen(NerveScreen, Adw.Bin):
     __gtype_name__ = "DesktopScreen"
 
     list_desktops = Gtk.Template.Child()
